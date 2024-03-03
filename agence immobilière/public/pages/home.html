@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/style.css" />
+    <link
+      rel="shortcut icon"
+      href="/agence immobilière/public/assets/imgs/logo agence immobilière.jpg"
+      type="image/x-icon"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inspiration&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Espit-Immo.com</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <div class="logo-name">
+          <h1>Esprit-Immo</h1>
+        </div>
+      </div>
+
+      <nav>
+        <input
+          type="search"
+          name="search-bar"
+          id="search-bar"
+          placeholder="Rechercher..."
+        />
+        <a href="#accueil">accueil</a>
+        <a href="#formulaire">créer mon annonce</a>
+        <a href="#nos-agents">nos agents</a>
+        <a href="#notre-agence">notre agence</a>
+        <a href="#nous-contacter">nous contacter</a>
+      </nav>
+
+    </header>
+
+    <main>
+      <section id="accueil">
+        <div class="content-first-page">
+          <div class="text-group">
+            <h2>L'immobilier qui vous donne le sourire</h2>
+            <p>L'agence immobilier n°1 en France</p>
+            <p>créer mon annonce</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="fomulaire-bloc" class="formulaire-bloc">
+
+        <form id="formulaire" class="formulaire">
+
+          <h3>Formulaire d'annonce</h3>
+
+          <div class="image">
+            <label for="image-annonce">Image de l'annonce :</label>
+            <input type="file" id="image-annonce" name="image" accept="image/*" aria-required="true">
+          </div>
+
+          <div class="tittle">
+            <label for="titre-annonce">Titre de l'annonce : </label>
+            <input type="text" id="titre-annonce" name="titre" placeholder="titre..." aria-required="true">
+          </div>
+        
+          <div class="description">
+            <label for="description-annonce">Description de l'annonce :</label>
+            <input type="text" id="description-annonce" name="description" placeholder="description..." aria-required="true">
+          </div>
+        
+          <div class="prix">
+            <label for="prix-annonce">Prix de l'annonce :</label>
+            <input type="number" id="prix-annonce" name="prix" placeholder="prix..." aria-required="true">
+          </div>
+        
+          <div class="adresse">
+            <label for="adresse">Adresse de l'annonce:</label>
+            <input type="text" id="adresse-annonce" name="adresse" placeholder="adresse..." aria-required="true">
+          </div>
+        
+          <div class="type">
+            <label for="type">Type du bien :</label>
+            <select id="selecter-biens" name="type" aria-required="true">
+              <option value="" disabled selected>Types de bien</option>
+              <option value="appartement">appartement</option>
+              <option value="maison">maison</option>
+              <option value="terrain">terrain</option>
+            </select>
+          </div>
+        
+          <button type="submit" id="envoyerAnnonce">créer mon annonce</button>
+        </form> 
+
+        <!-- <h1>Formulaire d'annonce immobilière</h1>
+  <form id="annonce-form">
+    <input type="file" id="image-annonce" required><br>
+    <input type="text" id="titre-annonce" placeholder="Titre de l'annonce" required><br>
+    <textarea id="description-annonce" placeholder="Description de l'annonce" required></textarea><br>
+    <input type="number" id="prix-annonce" placeholder="Prix" required><br>
+    <input type="text" id="adresse-annonce" placeholder="Adresse" required><br>
+    <select id="selecter-biens" required>
+      <option value="">Sélectionner un type de bien</option>
+      <option value="Maison">Maison</option>
+      <option value="Appartement">Appartement</option>
+      <option value="Terrain">Terrain</option>
+    </select><br>
+    <div id="maison-fields" style="display: none;">
+      <label for="etages">Étages:</label>
+      <input type="number" id="etages"><br>
+      <label for="nombre-pieces-maison">Nombre de pièces:</label>
+      <input type="number" id="nombre-pieces-maison"><br>
+      <label for="piscine">Piscine:</label>
+      <input type="checkbox" id="piscine"><br>
+      <label for="garage">Garage:</label>
+      <input type="checkbox" id="garage"><br>
+      <label for="jardin">Jardin:</label>
+      <input type="checkbox" id="jardin"><br>
+    </div>
+    <div id="appartement-fields" style="display: none;">
+      <label for="etages-appartement">Étages:</label>
+      <input type="number" id="etages-appartement"><br>
+      <label for="ascenseur">Ascenseur:</label>
+      <input type="checkbox" id="ascenseur"><br>
+      <label for="nombre-pieces-appartement">Nombre de pièces:</label>
+      <input type="number" id="nombre-pieces-appartement"><br>
+    </div>
+    <div id="terrain-fields" style="display: none;">
+      <label for="type-construction">Type de construction:</label>
+      <select id="type-construction">
+        <option value="Appart">Appart</option>
+        <option value="Maison">Maison</option>
+        <option value="Studio">Studio</option>
+        <option value="Garage">Garage</option>
+        <option value="Entreprise">Entreprise</option>
+      </select><br>
+      <label for="nombre-pieces-terrain">Nombre de pièces:</label>
+      <input type="number" id="nombre-pieces-terrain"><br>
+      <label for="etages-terrain">Étages:</label>
+      <input type="number" id="etages-terrain"><br>
+      <label for="jardin-terrain">Jardin:</label>
+      <input type="checkbox" id="jardin-terrain"><br>
+      <label for="garage-terrain">Garage:</label>
+      <input type="checkbox" id="garage-terrain"><br>
+      <label for="piscine-terrain">Piscine:</label>
+      <input type="checkbox" id="piscine-terrain"><br>
+    </div>
+    <button type="submit" id="envoyerAnnonce">Envoyer l'annonce</button>
+  </form> -->
+
+      </section>
+    
+      <section id="annonces">
+        <h3>Liste des annonces :</h3>
+        <div id="div-annonces" class="div-annonces"></div>
+      </section>
+
+      <section id="nos-agents" class="nos-agents">
+        <h2>Nos agents</h2>
+
+        <div class="all-bloc">
+          <div class="bloc">
+            <img
+              src="/agence immobilière/public/assets/imgs/femme 1.2.jpg"
+              alt=""
+            />
+
+            <div class="text-bloc">
+              <p>Emma Lefèvre</p>
+              <p>Diagnistiqueuse immobilière</p>
+            </div>
+          </div>
+
+          <div class="bloc">
+            <img
+              src="/agence immobilière/public/assets/imgs/image femme veste bleue.jpg"
+              alt=""
+            />
+
+            <div class="text-bloc">
+              <p>Sophie Martin</p>
+              <p>Diagnistiqueuse immobilière</p>
+            </div>
+          </div>
+
+          <div class="bloc">
+            <img
+              src="/agence immobilière/public/assets/imgs/image d'homme 1.jpg"
+              alt=""
+            />
+
+            <div class="text-bloc">
+              <p>Pierre Dupont</p>
+              <p>Experte immobilier</p>
+            </div>
+          </div>
+
+          <div class="bloc">
+            <img
+              src="/agence immobilière/public/assets/imgs/image femme 3.jpg"
+              alt=""
+            />
+
+            <div class="text-bloc">
+              <p>Claire Dubois</p>
+              <p>Agente immobilière</p>
+            </div>
+          </div>
+
+          <div class="bloc">
+            <img
+              src="/agence immobilière/public/assets/imgs/image d'homme 2.jpg"
+              alt=""
+            />
+
+            <div class="text-bloc">
+              <p>Antoine Leroy</p>
+              <p>Agent immobilier</p>
+            </div>
+          </div>
+
+          <div class="bloc">
+            <img
+              src="/agence immobilière/public/assets/imgs/homme 3.2.jpg"
+              alt=""
+            />
+
+            <div class="text-bloc">
+              <p>Cédric Lumole</p>
+              <p>Administrateur de biens immobiliers</p>
+            </div>
+        </div>
+      </section>
+
+      <section id="notre-agence" class="notre-agence">
+        <h2>notre agence</h2>
+
+       <div class="all-blocs">
+
+        <div class="bloc-number">
+          <div class="text">
+            <div class="top-bloc">
+              <p>30 K +</p>
+            </div>
+            <div class="bottom-bloc">
+              <p>Clients par an</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bloc-number">
+          <div class="text">
+            <div class="top-bloc">
+              <p>43 +</p>
+            </div>
+            <div class="bottom-bloc">
+              <p>Bureaux en France</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bloc-number">
+          <div class="text">
+            <div class="top-bloc">
+              <p>36 +</p>
+            </div>
+            <div class="bottom-bloc">
+              <p>Etudiants</p>
+            </div>
+          </div>
+        </div>
+       </div>
+
+<section id="nous-contacter">
+
+  <div class="div-bloc-lightblue">
+
+    <div class="div-separate">
+      <div class="text-top-bloc">
+        <h3>Abonnez-vous à notre newsletter</h3>
+        <p>laissez nous vos coordonnées, nous vous enverrons des nouvelles au plus vite</p>
+      </div>
+  
+      <div class="button-mail-send">
+        <input type="text" name="text" id="text-input" placeholder="adrese mail...">
+
+        <button type="submit" id="buttonEnvoyer">envoyer</button>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+      </section>
+    </main>
+
+    <footer id="nous-contacter" class="nous-contacter">
+
+      <div class="all-cards">
+
+        <div class="card">
+          <h3> A découvrir</h3>
+
+          <ul>
+            <li><a href="#">Nos conseils</a></li>
+            <li><a href="#">Nos actualités</a></li>
+            <li><a href="#">Nos agences</a></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3> Confidentialité</h3>
+
+          <ul>
+            <li><a href="#">Plan du site</a></li>
+            <li><a href="#">Informations légales</a></li>
+            <li><a href="#">Politique de protection de données</a></li>
+            <li><a href="#">Poplitique de cookies</a></li>
+            <li><a href="#">Gestion de cookies</a></li>
+
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>A propos de nous</h3>
+
+          <ul>
+            <li><a href="#">Nos agences</a></li>
+            <li><a href="#">Qui sommes nous</a></li>
+            <li><a href="#">Espaces press</a></li>
+            <li><a href="#">Ouvrir une agence</a></li>
+            <li><a href="#">Offre d'emploi</a></li>
+
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Notre application</h3>
+
+        </div>
+
+      </div>
+
+      
+    </footer>
+    <p class="copyrights">&copy; Copyrights 2024 Esprit Immobilier FR, Inc. tous droits réservés</p>
+
+<script>
+
+// const formulaire = document.getElementById("formulaire");
+// formulaire.addEventListener("submit", function(event) {
+//   event.preventDefault(); // Empêche le rechargement de la page
+// });
+
+</script>
+
+    <script src="../JS/scripts/index.js"></script>
+  </body>
+</html>
+
+

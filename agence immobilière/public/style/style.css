@@ -1,0 +1,806 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #5c6b73;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+::selection {
+  background-color: none;
+  color: dodgerblue;
+}
+
+h1,
+h2,
+h3,
+p {
+  text-align: center;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+  margin: 40px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  font-size: 20px;
+  color: #d2ba94;
+}
+
+.logo-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+.logo-name {
+  font-size: 16px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  margin: 40px;
+  text-decoration: none;
+  color: #d2ba94;
+  font-size: 18px;
+  font-family: sans-serif;
+  transition-duration: 0.5s;
+
+  /* font-weight: 900; */
+}
+
+nav a:hover {
+  font-family: "Josefin Slab", serif;
+  color: aliceblue;
+  font-size: 25px;
+  transition-duration: 0.5s;
+  font-weight: bold;
+}
+
+#search-bar {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #5c6b73;
+  font-size: 16px;
+  text-decoration: bold;
+  padding: 5px;
+  width: 140px;
+}
+
+.content-first-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  margin: 0px 80px;
+}
+
+.text-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+
+  color: #9db4c0;
+  font-family: "Josefin Slab", serif;
+  font-size: 40px;
+  width: 50%;
+}
+
+.text-group p:nth-child(1) {
+  margin-top: 300px;
+}
+
+.text-group p:nth-child(2) {
+  margin: 0;
+}
+
+.text-group p:nth-child(3) {
+  margin: 150px auto 0px auto;
+}
+
+.all-formulaire {
+  background-color: #0b1d51;
+  width: 50%;
+  height: 900px;
+  border-radius: 30px;
+}
+
+/* .ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  padding: 50px;
+  margin: 0px 50px;
+  border-radius: 25px;
+  color: #0b1d51;
+} */
+
+#annonces h3 {
+  text-align: center;
+  margin-top: 90px;
+}
+
+.nos-agents {
+  margin-top: 200px;
+}
+
+.nos-agents h2 {
+  text-align: center;
+  text-decoration: underline;
+  color: #9db4c0;
+  text-transform: uppercase;
+  margin-bottom: 100px;
+}
+
+.all-bloc {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.bloc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px 100px;
+  background-color: aliceblue;
+  padding: 10px;
+  border-radius: 15px;
+  width: 250px;
+
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.bloc img {
+  width: 240px;
+  border-radius: 30px;
+}
+
+.text-bloc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  text-align: center;
+  font-family: "Josefin Slab", serif;
+  font-size: 25px;
+  padding: 20px;
+}
+
+.text-bloc p:nth-child(1) {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.text-bloc p:nth-child(2) {
+  font-size: 25px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.formulaire-bloc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulaire {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  margin: 50px;
+  border: 3px solid #253237;
+  border-radius: 30px;
+  width: 600px;
+  height: 900px;
+}
+
+.formulaire h3 {
+  color: #9db4c0;
+  font-size: 35px;
+  font-family: "Josefin Slab", serif;
+  text-decoration: underline;
+}
+
+/* image */
+.image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+  cursor: pointer;
+}
+
+.image input {
+  padding: 10px;
+  width: 300px;
+  height: 40px;
+  text-align: center;
+  border-radius: 15px;
+  border: none;
+  font-family: "Josefin Slab", serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* tittre */
+.tittle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.tittle input {
+  padding: 5px;
+  width: 300px;
+  height: 40px;
+  text-align: center;
+  border-radius: 15px;
+  border: none;
+  font-family: "Josefin Slab", serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* description */
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.description input {
+  padding: 5px;
+  width: 300px;
+  height: 40px;
+  text-align: center;
+  border-radius: 15px;
+  border: none;
+  font-family: "Josefin Slab", serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* prix */
+.prix {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.prix input {
+  padding: 5px;
+  width: 300px;
+  height: 40px;
+  text-align: center;
+  border-radius: 15px;
+  border: none;
+  font-family: "Josefin Slab", serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* adresse */
+.adresse {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.adresse input {
+  padding: 5px;
+  width: 300px;
+  height: 40px;
+  text-align: center;
+  border-radius: 15px;
+  border: none;
+  font-family: "Josefin Slab", serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* type */
+.type {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.type select {
+  padding: 5px;
+  width: 300px;
+  height: 40px;
+  text-align: center;
+  border-radius: 15px;
+  border: none;
+  font-family: "Josefin Slab", serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.type option {
+  padding: 5px;
+  width: 300px;
+  height: 40px;
+  text-align: center;
+  border-radius: 15px;
+  border: none;
+  font-family: "Josefin Slab", serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* button envoyer */
+#envoyerAnnonce {
+  text-align: center;
+
+  margin-top: 50px;
+  padding: 5px;
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  border-radius: 15px;
+  border: none;
+  font-family: "Josefin Slab", serif;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+#envoyerAnnonce:hover {
+  background-color: lightgreen;
+  color: #000000;
+  border: 2px solid #000000;
+  text-align: center;
+  width: 210px;
+  height: 50px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 19px;
+}
+
+/* fin  bouton envoyer */
+
+.notre-agence {
+  margin-top: 200px;
+}
+
+.notre-agence h2 {
+  text-align: center;
+  text-decoration: underline;
+  color: #9db4c0;
+  text-transform: uppercase;
+  margin-bottom: 100px;
+}
+
+.all-blocs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.bloc-number {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 250px;
+  height: 250px;
+
+  background-color: aliceblue;
+  border-radius: 25px;
+  margin: 50px 0px;
+
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.bloc-number {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-bloc p {
+  color: #d2ba94;
+  font-size: 50px;
+}
+
+.bottom-bloc p {
+  color: #000;
+  font-size: 25px;
+}
+
+#nous-contacter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-bloc-lightblue {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  margin: 200px 0px;
+  background-color: #9db4c0;
+  border-radius: 50px;
+  width: 970px;
+  height: 400px;
+}
+
+.div-separate {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 1200px;
+  height: 700px;
+}
+
+.text-top-bloc {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.text-top-bloc h3 {
+  color: #5f5f5f;
+  font-size: 48px;
+  font-weight: lighter;
+}
+
+.text-top-bloc p {
+  color: aliceblue;
+  font-size: 22px;
+  width: 70%;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.button-mail-send {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#text-input {
+  /* padding: 20px; */
+  height: 70px;
+  width: 500px;
+  color: #5c6b73;
+  font-size: 25px;
+  border-radius: 20px 0px 0px 20px;
+  border: none;
+  text-align: center;
+}
+
+#text-input:focus {
+  background-color: aliceblue;
+  border: none;
+}
+
+#buttonEnvoyer {
+  /* padding: 20px; */
+  width: 200px;
+  height: 70px;
+  color: #5c6b73;
+  font-size: 25px;
+  border-radius: 0px 20px 20px 0px;
+  border: none;
+  cursor: pointer;
+}
+
+#buttonEnvoyer:hover {
+  background-color: default;
+  color: #000;
+  border: 3px solid #5c6b73;
+  width: 210px;
+  height: 80px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #9db4c0;
+  box-shadow: rgba(0, 0, 0, 0.3) 15px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 0px 20px;
+  transition-duration: 0.1s;
+  letter-spacing: 2px;
+}
+
+#buttonEnvoyer:focus {
+  background-color: lightgreen;
+  transition-duration: 3s;
+  color: #253237;
+}
+
+#nous-contacter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer {
+  width: 100%;
+}
+
+.all-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+  width: 100%;
+  background-color: #404040;
+  padding: 20px;
+}
+
+.card {
+  background-color: rgb(235, 235, 235);
+  border-radius: 20px;
+  margin: 20px;
+  width: 280px;
+  height: 370px;
+}
+
+.card h3 {
+  text-align: center;
+  color: #000;
+  padding: 30px;
+}
+
+.card a {
+  display: flex;
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  list-style-type: none;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  padding-bottom: 20px;
+  width: 200px;
+}
+
+.copyrights {
+  padding: 10px;
+  font-size: 22px;
+  color: aliceblue;
+}
+
+/* Styles pour chaque annonce */
+#div-annonces div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 27%;
+  margin: 5px 25px;
+  background-color: #9db4c0;
+  border-radius: 20px;
+}
+
+/* Styles pour la div contenant les annonces */
+#div-annonces {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  width: auto;
+  height: auto;
+  padding: 10px;
+  margin: 30px 40px;
+  border-radius: 30px;
+}
+#div-annonces h3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+
+  width: 500px;
+  margin: 20px 0px;
+  border-radius: 30px;
+  text-align: center;
+}
+#div-annonces p {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+
+  width: 500px;
+  margin: 5px 0px;
+  border-radius: 30px;
+  text-align: center;
+}
+
+/* Styles pour l'image de l'annonce */
+#div-annonces div img {
+  display: flex;
+  width: 350px;
+  height: 500px;
+  border-radius: 20px;
+  border: #9db4c0 5px solid;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* button pour supprimer la div */
+#div-annonces div button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #fc4141;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin: 100px;
+  height: 40px;
+  margin: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#div-annonces div button:hover {
+  background-color: #ca0000;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin: 100px;
+  height: 40px;
+  margin: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#div-annonces div button:active {
+  background-color: #810000;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin: 100px;
+  height: 40px;
+  margin: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#div-annonces .type {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  width: 400px;
+  border-radius: 30px;
+  background-color: #0b1d51;
+}
+
+/* Styles pour les écrans de 576px ou moins */
+@media screen and (max-width: 576px) {
+}
+
+/* Styles pour les écrans de 576px ou plus */
+@media screen and (min-width: 576px) {
+}
+
+/* Styles pour les écrans de 768px ou plus */
+@media screen and (min-width: 768px) {
+}
+
+/* Styles pour les écrans de 992px ou plus */
+@media screen and (min-width: 992px) {
+}
+
+/* Styles pour les écrans de 1200px ou plus */
+@media screen and (min-width: 1200px) {
+}
+
+/* Styles pour les écrans de 1400px ou plus */
+@media screen and (min-width: 1400px) {
+}
